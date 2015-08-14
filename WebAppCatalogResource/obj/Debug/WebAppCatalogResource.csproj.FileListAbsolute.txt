@@ -1,0 +1,10 @@
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\WebAppCatalogResource.dll
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\WebAppCatalogResource.pdb
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\itextsharp.dll
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\protobuf-net.dll
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\itextsharp.xml
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\protobuf-net.pdb
+C:\Projects\Searcharoo7\WebAppCatalogResource\bin\Debug\protobuf-net.xml
+C:\Projects\Searcharoo7\WebAppCatalogResource\obj\Debug\WebAppCatalogResource.csprojResolveAssemblyReference.cache
+C:\Projects\Searcharoo7\WebAppCatalogResource\obj\Debug\WebAppCatalogResource.dll
+C:\Projects\Searcharoo7\WebAppCatalogResource\obj\Debug\WebAppCatalogResource.pdb

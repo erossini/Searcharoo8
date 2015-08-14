@@ -1,0 +1,21 @@
+# robots.txt for http://www.searcharoo.net/
+
+User-agent: *
+Disallow: /Search	# prevent indexing of search results page
+Disallow: /App_Code/	# iis won't let us in here anyway
+Disallow: /Bin/
+Disallow: /Code/
+Disallow: /obj/
+Disallow: /Properties/
+Disallow: /Temp/
+Disallow: /z_	# prevent indexing of the catalog!
+Disallow: /Web	# prevent web.config, webapplication.csproj
+
+User-agent: Searcharoo
+Disallow: /z_
+
+User-agent: MSN
+Disallow: /
+
+User-agent: Altavista
+Disallow: /

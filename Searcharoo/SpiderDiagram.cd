@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="When the Spider is processing Words from the Document classes and adding them to the Catalog, it uses helper classes to manage Stemming, Stop and Go words">
+    <Position X="3.865" Y="0.5" Height="0.854" Width="2.304" />
+  </Comment>
+  <Comment CommentText="The Stemming and Stop and Go helpers are also used to pre-process Search terms entered by the user">
+    <Position X="6.917" Y="0.5" Height="0.615" Width="2.304" />
+  </Comment>
+  <Comment CommentText="Preferences control many aspects of the Spider, including which Interface implemtations to use for Stemming, Stop &amp; Go">
+    <Position X="2.938" Y="5.177" Height="0.75" Width="2.554" />
+  </Comment>
+  <Class Name="Searcharoo.Indexer.Spider">
+    <Position X="1.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Spider.cs</FileName>
+      <HashCode>AOABQAIQgAAAAAQAQACAAAAAAAAAgAAEBAEAQgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Stemmer" />
+      <Field Name="_Stopper" />
+      <Field Name="_GoChecker" />
+      <Field Name="_Catalog" />
+    </ShowAsAssociation>
+    <Members>
+      <Event Name="SpiderProgressEvent" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.NoGoWord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\GoWords\GoWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.ListGoWord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\GoWords\GoWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.FileGoWord" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\GoWords\GoWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.PorterStemmer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Stemming\PorterStemmer.cs</FileName>
+      <HashCode>QAAoAAAIQAUAAAAEAgIAAAABEUCIAABAowEBAAACAAg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.NoStemming" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Stemming\NoStemming.cs</FileName>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.NoStopping" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\StopWords\StopWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.ShortStopper" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\StopWords\StopWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.ListStopper" Collapsed="true">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\StopWords\StopWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.FileStopper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\StopWords\StopWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Searcharoo.Common.Catalog" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Catalog.cs</FileName>
+      <HashCode>AAIggIAAAAAAAAAEAAAAAABAAAAABAAAAAAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.Preferences" Collapsed="true">
+    <Position X="1.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Preferences.cs</FileName>
+      <HashCode>EEAAAAjAAAQQoAIQAAiQBAAAAAEAAyAgAQAAAQCBKiA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Searcharoo.Common.IGoWord">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\GoWords\GoWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Searcharoo.Common.IStemming">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Stemming\IStemming.cs</FileName>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Searcharoo.Common.IStopper">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\StopWords\StopWords.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>

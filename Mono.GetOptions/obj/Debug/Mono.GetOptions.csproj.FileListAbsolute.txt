@@ -1,0 +1,9 @@
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\Mono.GetOptions.dll
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\Mono.GetOptions.pdb
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\itextsharp.dll
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\protobuf-net.dll
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\itextsharp.xml
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\protobuf-net.pdb
+C:\Projects\Searcharoo7\Mono.GetOptions\bin\Debug\protobuf-net.xml
+C:\Projects\Searcharoo7\Mono.GetOptions\obj\Debug\Mono.GetOptions.dll
+C:\Projects\Searcharoo7\Mono.GetOptions\obj\Debug\Mono.GetOptions.pdb

@@ -1,0 +1,14 @@
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\Searcharoo.dll
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\Searcharoo.pdb
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\Searcharoo.dll.CodeAnalysisLog.xml
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\Searcharoo.dll.lastcodeanalysissucceeded
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\EPocalipse.IFilter.dll
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\itextsharp.dll
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\protobuf-net.dll
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\EPocalipse.IFilter.pdb
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\itextsharp.xml
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\protobuf-net.pdb
+C:\Projects\Searcharoo7\Searcharoo\bin\Debug\protobuf-net.xml
+C:\Projects\Searcharoo7\Searcharoo\obj\Debug\Searcharoo.csprojResolveAssemblyReference.cache
+C:\Projects\Searcharoo7\Searcharoo\obj\Debug\Searcharoo.dll
+C:\Projects\Searcharoo7\Searcharoo\obj\Debug\Searcharoo.pdb

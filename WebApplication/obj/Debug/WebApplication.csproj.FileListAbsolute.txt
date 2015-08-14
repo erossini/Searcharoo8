@@ -1,0 +1,17 @@
+C:\Projects\Searcharoo7\WebApplication\bin\WebApplication.dll.config
+C:\Projects\Searcharoo7\WebApplication\bin\WebApplication.dll
+C:\Projects\Searcharoo7\WebApplication\bin\WebApplication.pdb
+C:\Projects\Searcharoo7\WebApplication\bin\itextsharp.dll
+C:\Projects\Searcharoo7\WebApplication\bin\protobuf-net.dll
+C:\Projects\Searcharoo7\WebApplication\bin\Searcharoo.dll
+C:\Projects\Searcharoo7\WebApplication\bin\WebAppCatalogResource.dll
+C:\Projects\Searcharoo7\WebApplication\bin\EPocalipse.IFilter.dll
+C:\Projects\Searcharoo7\WebApplication\bin\Searcharoo.pdb
+C:\Projects\Searcharoo7\WebApplication\bin\WebAppCatalogResource.pdb
+C:\Projects\Searcharoo7\WebApplication\bin\itextsharp.xml
+C:\Projects\Searcharoo7\WebApplication\bin\protobuf-net.pdb
+C:\Projects\Searcharoo7\WebApplication\bin\protobuf-net.xml
+C:\Projects\Searcharoo7\WebApplication\bin\EPocalipse.IFilter.pdb
+C:\Projects\Searcharoo7\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Projects\Searcharoo7\WebApplication\obj\Debug\WebApplication.dll
+C:\Projects\Searcharoo7\WebApplication\obj\Debug\WebApplication.pdb

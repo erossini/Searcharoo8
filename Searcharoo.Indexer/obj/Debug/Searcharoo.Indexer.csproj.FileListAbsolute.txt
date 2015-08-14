@@ -1,0 +1,17 @@
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Searcharoo.Indexer.exe.config
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Searcharoo.Indexer.exe
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Searcharoo.Indexer.pdb
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\itextsharp.dll
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Mono.GetOptions.dll
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\protobuf-net.dll
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Searcharoo.dll
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\EPocalipse.IFilter.dll
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Mono.GetOptions.pdb
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\Searcharoo.pdb
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\itextsharp.xml
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\protobuf-net.pdb
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\protobuf-net.xml
+C:\Projects\Searcharoo7\Searcharoo.Indexer\bin\Debug\EPocalipse.IFilter.pdb
+C:\Projects\Searcharoo7\Searcharoo.Indexer\obj\Debug\Searcharoo.Indexer.csprojResolveAssemblyReference.cache
+C:\Projects\Searcharoo7\Searcharoo.Indexer\obj\Debug\Searcharoo.Indexer.exe
+C:\Projects\Searcharoo7\Searcharoo.Indexer\obj\Debug\Searcharoo.Indexer.pdb

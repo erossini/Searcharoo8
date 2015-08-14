@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="Searcharoo v4&#xD;&#xA;ASP.NET 2.0&#xD;&#xA;Visual Studio 2005">
+    <Position X="0.521" Y="0.51" Height="0.615" Width="1.481" />
+  </Comment>
+  <Class Name="Searcharoo.Common.Catalog">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Catalog.cs</FileName>
+      <HashCode>AAIggIAAAAAAAAAEAAAAAABAAAAABAAAAAAAAAAgAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Words" />
+    </ShowAsAssociation>
+    <AssociationLine Name="Words" Type="Searcharoo.Common.Word" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.812" Y="4.731" />
+        <Point X="6.812" Y="5.106" />
+        <Point X="6.812" Y="5.106" />
+        <Point X="6.812" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.093" Y="0.311" Height="0.16" Width="0.666" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="Searcharoo.Common.Word">
+    <Position X="6" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Word.cs</FileName>
+      <HashCode>AAIACIAAAAAAAAAEAAAAAAAACAAAAAAAAAAACAAAAIA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Files" />
+    </ShowAsAssociation>
+    <AssociationLine Name="Files" Type="Searcharoo.Common.File">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.057" Y="0.185" Height="0.16" Width="0.589" />
+      </MemberNameLabel>
+    </AssociationLine>
+  </Class>
+  <Class Name="Searcharoo.Common.CatalogBinder">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\CatalogBinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.File">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\File.cs</FileName>
+      <HashCode>QAAAAAgAAAAggEAEAAAAAAIAAIAQAAAECAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.ResultFile">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\ResultFile.cs</FileName>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.HtmlDocument">
+    <Position X="14" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\HtmlDocument.cs</FileName>
+      <HashCode>CgAgAAAAAgCwAAAEAAACCAAAgIAEAEAECIAQgAAQwAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_ContentType" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_MimeType" Hidden="true" />
+      <Field Name="_RobotFollowOK" Hidden="true" />
+      <Field Name="_RobotIndexOK" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Uri" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Field Name="Encoding" Hidden="true" />
+      <Method Name="HtmlDocument" Hidden="true" />
+      <Field Name="Keywords" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.Preferences">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Preferences.cs</FileName>
+      <HashCode>EEAAAAjAAAQQoAIQAAiQBAAAAAEAAyAgAQAAAQCBKiA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_AssumeAllWordsAreEnglish" Hidden="true" />
+      <Field Name="_DownloadedTempFilePath" Hidden="true" />
+      <Field Name="_IgnoreRegionTagNoIndex" Hidden="true" />
+      <Field Name="_RecursionLimit" Hidden="true" />
+      <Field Name="_RequestTimeout" Hidden="true" />
+      <Field Name="_RobotUserAgent" Hidden="true" />
+      <Field Name="_SummaryCharacters" Hidden="true" />
+      <Field Name="_UserAgent" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Searcharoo.Engine.Search">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Engine\Search.cs</FileName>
+      <HashCode>CCAAAAAQAABAAAQABAAAAAAAACAAAAAAAAAABgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_DisplayTime" Hidden="true" />
+      <Field Name="_GoChecker" Hidden="true" />
+      <Field Name="_Matches" Hidden="true" />
+      <Field Name="_Stemmer" Hidden="true" />
+      <Field Name="_Stopper" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Indexer.ProgressEventArgs">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\ProgressEventArgs.cs</FileName>
+      <HashCode>AAAAAQAAAAAgAAAEAAAAAAAAABAAAAAFAAAAIAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Indexer.RobotsTxt">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\RobotsTxt.cs</FileName>
+      <HashCode>QAAAAgAAAAAAAAAAIABAAAAAAAAAAAAAACAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="Searcharoo.Indexer.RobotsTxt.RobotInstruction">
+        <TypeIdentifier>
+          <NewMemberFileName>Indexer\RobotsTxt.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+  </Class>
+  <Class Name="Searcharoo.Indexer.Spider">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Spider.cs</FileName>
+      <HashCode>AOABQAIQgAAAAAQAQACAAAAAAAAAgAAEBAEAQgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_Robot" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Searcharoo.Common.Document">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Document.cs</FileName>
+      <HashCode>CiAgAAQAAAAgAEQAAAACAABAAIAEkEAECIAQgAAQgAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_ContentType" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Length" Hidden="true" />
+      <Field Name="_MimeType" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Uri" Hidden="true" />
+      <Method Name="Document" Hidden="true" />
+      <Field Name="ExternalLinks" Hidden="true" />
+      <Field Name="LocalLinks" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.DocumentFactory">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\DocumentFactory.cs</FileName>
+      <HashCode>AAAAAAAAAACAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.FilterDocument">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\FilterDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEEEAAAIAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="FilterDocument" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.IgnoreDocument">
+    <Position X="11" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\IgnoreDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="IgnoreDocument" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.TextDocument">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\TextDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEEEAAAIAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="TextDocument" Hidden="true" />
+    </Members>
+  </Class>
+  <Interface Name="Searcharoo.Common.IGoWord" Collapsed="true">
+    <Position X="2.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\GoWords\IGoWord.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Searcharoo.Common.IStemming" Collapsed="true">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Stemming\IStemming.cs</FileName>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Searcharoo.Common.IStopper" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\StopWords\IStopper.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Searcharoo.Indexer.Level">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\ProgressEventArgs.cs</FileName>
+      <HashCode>AAAAAABAAIAAAAAAAAABAAAABAAAAAAEAAAAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Searcharoo.Indexer.SpiderProgressEventHandler">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\ProgressEventArgs.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Delegate>
+</ClassDiagram>

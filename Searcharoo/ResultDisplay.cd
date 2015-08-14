@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="Document subclasses are used by the Indexer to gather data">
+    <Position X="0.521" Y="0.5" Height="0.406" Width="1.929" />
+  </Comment>
+  <Comment CommentText="File class is stored in the Catalog">
+    <Position X="2.958" Y="0.5" Height="0.385" Width="1.908" />
+  </Comment>
+  <Comment CommentText="ResultFile 'wraps' File and adds presentation-specific methods/ helpers">
+    <Position X="4.593" Y="4.031" Height="0.698" Width="1.367" />
+  </Comment>
+  <Class Name="Searcharoo.Common.File">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\File.cs</FileName>
+      <HashCode>QBAAAAgAAAAggEAEAIAAAAIAAKAQAQgFCYAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_CrawledDate" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Extension" Hidden="true" />
+      <Field Name="_GpsLocation" Hidden="true" />
+      <Field Name="_KeywordString" Hidden="true" />
+      <Field Name="_Size" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Url" Hidden="true" />
+      <Method Name="File" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.ResultFile">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\ResultFile.cs</FileName>
+      <HashCode>AAEBAAAACAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_Rank" Hidden="true" />
+      <Method Name="ResultFile" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.Document">
+    <Position X="0.5" Y="1" Width="2" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\Document.cs</FileName>
+      <HashCode>CiAgAAQIAAAgAEQAAIACAABAAKAEkUAEDYAQgAARgAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_ContentType" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Extension" Hidden="true" />
+      <Field Name="_GpsLocation" Hidden="true" />
+      <Field Name="_Keywords" Hidden="true" />
+      <Field Name="_Length" Hidden="true" />
+      <Field Name="_MimeType" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Uri" Hidden="true" />
+      <Field Name="ExternalLinks" Hidden="true" />
+      <Field Name="LocalLinks" Hidden="true" />
+    </Members>
+  </Class>
+</ClassDiagram>

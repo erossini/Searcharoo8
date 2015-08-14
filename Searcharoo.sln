@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{461E3789-7D39-49CA-BD5B-19934E8F412E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPocalipse.IFilter", "EPocalipse.IFilter\EPocalipse.IFilter.csproj", "{400462CE-40B3-498F-B95A-B1D2AE679359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searcharoo", "Searcharoo\Searcharoo.csproj", "{864689AB-F471-4A08-AD4C-A125D5B9B3EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searcharoo.Indexer", "Searcharoo.Indexer\Searcharoo.Indexer.csproj", "{DA147031-16CC-486D-BBE4-143D4EC659EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mono.GetOptions", "Mono.GetOptions\Mono.GetOptions.csproj", "{77D5FD1D-325D-4379-9D45-00CAC7DE365E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppCatalogResource", "WebAppCatalogResource\WebAppCatalogResource.csproj", "{9A159842-4459-4A0D-A49F-5BCBE6E5ED95}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{461E3789-7D39-49CA-BD5B-19934E8F412E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461E3789-7D39-49CA-BD5B-19934E8F412E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461E3789-7D39-49CA-BD5B-19934E8F412E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461E3789-7D39-49CA-BD5B-19934E8F412E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{400462CE-40B3-498F-B95A-B1D2AE679359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{400462CE-40B3-498F-B95A-B1D2AE679359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{400462CE-40B3-498F-B95A-B1D2AE679359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{400462CE-40B3-498F-B95A-B1D2AE679359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{864689AB-F471-4A08-AD4C-A125D5B9B3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{864689AB-F471-4A08-AD4C-A125D5B9B3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{864689AB-F471-4A08-AD4C-A125D5B9B3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{864689AB-F471-4A08-AD4C-A125D5B9B3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA147031-16CC-486D-BBE4-143D4EC659EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA147031-16CC-486D-BBE4-143D4EC659EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA147031-16CC-486D-BBE4-143D4EC659EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA147031-16CC-486D-BBE4-143D4EC659EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D5FD1D-325D-4379-9D45-00CAC7DE365E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D5FD1D-325D-4379-9D45-00CAC7DE365E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D5FD1D-325D-4379-9D45-00CAC7DE365E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D5FD1D-325D-4379-9D45-00CAC7DE365E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A159842-4459-4A0D-A49F-5BCBE6E5ED95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A159842-4459-4A0D-A49F-5BCBE6E5ED95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A159842-4459-4A0D-A49F-5BCBE6E5ED95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A159842-4459-4A0D-A49F-5BCBE6E5ED95}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

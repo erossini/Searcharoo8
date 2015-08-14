@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="The Catalog uses the Binder to deserialize from disk for searching.&#xD;&#xA;&#xD;&#xA;It contains Words (which refer to Files).&#xD;&#xA;&#xD;&#xA;ASPX pages create an instance of Search to call GetResults, to get a list of ResultFiles back to display in a Repeater">
+    <Position X="4.167" Y="0.5" Height="1.76" Width="1.617" />
+  </Comment>
+  <Comment CommentText="Storing the list of Positions is new in [v7]... &#xD;&#xA;">
+    <Position X="10.01" Y="2.812" Height="0.969" Width="1.96" />
+  </Comment>
+  <Class Name="Searcharoo.Engine.Search">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Engine\Search.cs</FileName>
+      <HashCode>CKAAAAAQAABAAAQABAAAAAAAACAAAAAAAAAEBgAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_DisplayTime" Hidden="true" />
+      <Field Name="_GoChecker" Hidden="true" />
+      <Field Name="_Matches" Hidden="true" />
+      <Field Name="_Stemmer" Hidden="true" />
+      <Field Name="_Stopper" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.Word">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Word.cs</FileName>
+      <HashCode>AAIACIAAAAAAAAAEAAAAAAAACQAAAAAAAgAACAAAAIA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Files" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_FileCollection" Hidden="true" />
+      <Field Name="_Text" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.File">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\File.cs</FileName>
+      <HashCode>QBAAAAgAAAAggEAEAIAAAAIAAKAQAQgFCYAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_CrawledDate" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Size" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Url" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.ResultFile">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\ResultFile.cs</FileName>
+      <HashCode>AAEBAAAACAAAAAAAAAAAAAEAAAAAACAAAAAAAAAAACA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_Rank" Hidden="true" />
+      <Method Name="ResultFile" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.Preferences">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Common\Preferences.cs</FileName>
+      <HashCode>EEAAACjCABQQogIQAQiYBAAAAAEAAyAgIQAAAQCBKiA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_AssumeAllWordsAreEnglish" Hidden="true" />
+      <Field Name="_DownloadedTempFilePath" Hidden="true" />
+      <Field Name="_IgnoreRegionTagNoIndex" Hidden="true" />
+      <Field Name="_RecursionLimit" Hidden="true" />
+      <Field Name="_RequestTimeout" Hidden="true" />
+      <Field Name="_RobotUserAgent" Hidden="true" />
+      <Field Name="_SummaryCharacters" Hidden="true" />
+      <Field Name="_UserAgent" Hidden="true" />
+      <Method Name="IfNullDefault" Hidden="true" />
+      <Method Name="Preferences" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.Catalog">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Catalog.cs</FileName>
+      <HashCode>AAIggIAAAAEAAQAEAAAAAABAAIAABEAAAAQAAgAgAog=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Words" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_Index" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.CatalogBinder">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\CatalogBinder.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Searcharoo.Common.CatalogWordFile">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Common\CatalogWordFile.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAAAACAgAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

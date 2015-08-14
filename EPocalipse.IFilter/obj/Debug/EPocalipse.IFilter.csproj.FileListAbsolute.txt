@@ -1,0 +1,9 @@
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.dll
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\EPocalipse.IFilter.pdb
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\itextsharp.dll
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\protobuf-net.dll
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\itextsharp.xml
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\protobuf-net.pdb
+C:\Projects\Searcharoo7\EPocalipse.IFilter\bin\Debug\protobuf-net.xml
+C:\Projects\Searcharoo7\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.dll
+C:\Projects\Searcharoo7\EPocalipse.IFilter\obj\Debug\EPocalipse.IFilter.pdb

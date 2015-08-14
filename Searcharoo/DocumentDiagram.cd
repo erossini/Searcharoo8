@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="SaveDownloadedFile() was previously part of FilterDocument, but has been refactored out so that the functionality can be shared.">
+    <Position X="4.844" Y="4.188" Height="0.604" Width="2.449" />
+  </Comment>
+  <Comment CommentText="The Office 2007 Document classes inherit DownloadDocument and add their own format-specific Xml parsing.">
+    <Position X="2.27" Y="8.532" Height="0.397" Width="4.971" />
+  </Comment>
+  <Comment CommentText="DocumentFactory needs to be updated to be aware of the DocxDocument and other classes/associated MIME Types; &#xD;&#xA;Jpg and Xps added in v6">
+    <Position X="2.145" Y="0.5" Height="0.97" Width="1.586" />
+  </Comment>
+  <Comment CommentText="NEW in version 6">
+    <Position X="6.375" Y="4.969" Height="0.263" Width="1.074" />
+  </Comment>
+  <Comment CommentText="new v6 properties">
+    <Position X="1.583" Y="3.188" Height="0.43" Width="0.7" />
+  </Comment>
+  <Comment CommentText="new v6 methods">
+    <Position X="1.948" Y="5.719" Height="0.43" Width="0.7" />
+  </Comment>
+  <Comment CommentText="These classes use MemoryStream - don't save to disk">
+    <Position X="5.219" Y="0.656" Height="0.263" Width="2.959" />
+  </Comment>
+  <Comment CommentText="Uses IFilter to index known types (eg. DOC, XLS, PPT, PDF)">
+    <Position X="0.541" Y="8.803" Height="0.564" Width="1.461" />
+  </Comment>
+  <Class Name="Searcharoo.Common.Document">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\Document.cs</FileName>
+      <HashCode>CiAgAAQIAAAgAEQAAIACAABAAKAEkUAEDYAQgAARgAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_ContentType" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Length" Hidden="true" />
+      <Field Name="_MimeType" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Uri" Hidden="true" />
+      <Method Name="Document" Hidden="true" />
+      <Field Name="ExternalLinks" Hidden="true" />
+      <Method Name="GetDescriptionFromWordsOnly" Hidden="true" />
+      <Field Name="LocalLinks" Hidden="true" />
+      <Method Name="WordsStringToArray" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Searcharoo.Common.TextDocument">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\TextDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEEEAAAIAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="TextDocument" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Searcharoo.Common.Document" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="3.154" />
+        <Point X="2.24" Y="3.154" />
+        <Point X="2.24" Y="2.812" />
+        <Point X="2.292" Y="2.812" Type="JumpStart" />
+        <Point X="2.458" Y="2.812" Type="JumpEnd" />
+        <Point X="5.75" Y="2.812" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="Searcharoo.Common.DocumentFactory">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\DocumentFactory.cs</FileName>
+      <HashCode>AAAAAAAAAAKAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="ParseEncoding" Hidden="true" />
+      <Method Name="ParseExtension" Hidden="true" />
+      <Method Name="ParseMimeType" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.FilterDocument">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\FilterDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEEEAAAIAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="FilterDocument" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Searcharoo.Common.DownloadDocument" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="5.351" />
+        <Point X="3.75" Y="6.365" />
+        <Point X="1.25" Y="6.365" />
+        <Point X="1.25" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="Searcharoo.Common.HtmlDocument">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\HtmlDocument.cs</FileName>
+      <HashCode>CgAgAAAAAgCwAAAEAAACCAAAgIAEAEAECIAQgAAQwAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_ContentType" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_MimeType" Hidden="true" />
+      <Field Name="_RobotFollowOK" Hidden="true" />
+      <Field Name="_RobotIndexOK" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Uri" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Field Name="Encoding" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Searcharoo.Common.Document" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="3.154" />
+        <Point X="2.375" Y="3.154" />
+        <Point X="2.375" Y="3.5" />
+        <Point X="7.5" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="Searcharoo.Common.IgnoreDocument">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\IgnoreDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="IgnoreDocument" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Searcharoo.Common.Document" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2" Y="3.154" />
+        <Point X="2.375" Y="3.154" />
+        <Point X="2.375" Y="2.375" />
+        <Point X="4" Y="2.375" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="Searcharoo.Common.DownloadDocument">
+    <Position X="2.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\DownloadDocument.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="DownloadDocument" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.PptxDocument">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\PptxDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="PptxDocument" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.XlsxDocument">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\XlsxDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="XlsxDocument" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.DocxDocument">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\DocxDocument.cs</FileName>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAQAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="DocxDocument" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Searcharoo.Common.JpegDocument">
+    <Position X="7.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Indexer\Documents\JpegDocument.cs</FileName>
+      <HashCode>AAAgAAAAEAAAAAAAAAAAAAAIAAAEEEEAAIAAgAAAwAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_All" Hidden="true" />
+      <Field Name="_WordsOnly" Hidden="true" />
+      <Method Name="JpegDocument" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Searcharoo.Common.JpegDocument.GpsData">
+        <TypeIdentifier>
+          <NewMemberFileName>Indexer\Documents\JpegDocument.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <InheritanceLine Type="Searcharoo.Common.DownloadDocument" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="4.875" />
+        <Point X="7.5" Y="4.875" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+</ClassDiagram>

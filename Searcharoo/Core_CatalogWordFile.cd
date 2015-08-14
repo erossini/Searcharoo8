@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Comment CommentText="This diagram is for the CodeProject article v5&#xD;&#xA;&#xD;&#xA;Introduces the WordFile class used for XmlSerialization of the Catalog&#xD;&#xA;&#xD;&#xA;">
+    <Position X="0.5" Y="0.5" Height="1.885" Width="1.617" />
+  </Comment>
+  <Class Name="Searcharoo.Common.Word">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\Word.cs</FileName>
+      <HashCode>AAIACIAAAAAAAAAEAAAAAAAACAAAAAAAAAAACAAAAIA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Files" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_FileCollection" Hidden="true" />
+      <Field Name="_Text" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.File">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\File.cs</FileName>
+      <HashCode>QAAAAAgAAAAggEAEAAAAAAIAAIAQAAAECAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_CrawledDate" Hidden="true" />
+      <Field Name="_Description" Hidden="true" />
+      <Field Name="_Size" Hidden="true" />
+      <Field Name="_Title" Hidden="true" />
+      <Field Name="_Url" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+  </Class>
+  <Class Name="Searcharoo.Common.Catalog">
+    <Position X="2.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Common\Catalog.cs</FileName>
+      <HashCode>AAIggIAAAAAAAQAEAAAAAABAAAAABAAAAAQAAgAgAog=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_WordfileArray" />
+      <Property Name="Words" />
+      <Property Name="Files" />
+      <Property Name="WordFiles" />
+    </ShowAsAssociation>
+    <Members>
+      <Field Name="_Index" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_WordfileArray" Type="Searcharoo.Common.CatalogWordFile" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="3.625" />
+        <Point X="5.125" Y="3.625" />
+        <Point X="5.125" Y="3.625" />
+        <Point X="5.75" Y="3.625" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="Searcharoo.Common.CatalogWordFile">
+    <Position X="5.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Common\CatalogWordFile.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Field Name="_fileIds" Hidden="true" />
+      <Field Name="_text" Hidden="true" />
+    </Members>
+  </Class>
+</ClassDiagram>
