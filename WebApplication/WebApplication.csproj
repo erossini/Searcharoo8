@@ -50,6 +50,10 @@
       <HintPath>..\packages\iTextSharp.5.5.6\lib\itextsharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\packages\protobuf-portable-net.2.0.0.668\lib\portable-net45+wp8+win8\protobuf-net.dll</HintPath>
       <Private>True</Private>
@@ -73,7 +77,6 @@
   <ItemGroup>
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="HtmlPage1.html" />
     <Content Include="robots.txt" />
     <Content Include="SearchControl.ascx" />
     <Content Include="Search.aspx" />
@@ -81,6 +84,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SearchCatalogInit.cs" />
+    <Content Include="App_Code\SearchCatalogInit.cs" />
     <Content Include="404.aspx" />
     <Content Include="App_Code\SearchPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -112,10 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="log4net.config" />
     <None Include="Silverlightaroo.zip" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="content\" />
+    <Folder Include="Logs\" />
     <Folder Include="Temp\" />
   </ItemGroup>
   <PropertyGroup>

@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.Xml.Serialization;
 using Searcharoo.Common;
+using System.Threading;
 
 namespace Searcharoo.WebApplication
 {
@@ -19,18 +20,24 @@ namespace Searcharoo.WebApplication
     /// </summary>
     public class SearchPageBase : Page
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         protected SearchControlBase ucSearchPanelHeader;
         protected SearchControlBase ucSearchPanelFooter;
         protected Repeater SearchResults;
         protected Panel lblNoSearchResults;
 
         #region Private Fields: _WordCount, _ErrorMessage, _Catalog, _SearchTerm, _PagedResults, _DisplayTime, _Matches, _NumberOfMatches
+
         /// <summary>Displayed in HTML - count of words IN CATALOG (not results)</summary>
         protected int _WordCount;
+
         /// <summary>Displayed in HTML - error message IF an error occurred</summary>
         protected string _ErrorMessage = String.Empty;
+
         /// <summary>Get from Cache</summary>
         protected Catalog _Catalog = null;
+
         /// <summary>Get from Cache [v7]</summary>
         protected Cache _Cache = null;
 
@@ -38,10 +45,13 @@ namespace Searcharoo.WebApplication
 
         /// <summary>Datasource to bind the results collection to, for paged display</summary>
         protected PagedDataSource _PagedResults = new PagedDataSource();
+
         /// <summary>Display string: time the search too</summary>
         protected string _DisplayTime;
+
         /// <summary>Display string: matches (links and number of)</summary>
         protected string _Matches = "";
+
         /// <summary>Display string: Number of pages that match the query</summary>
         protected string _NumberOfMatches;
 
@@ -51,10 +61,11 @@ namespace Searcharoo.WebApplication
         /// <summary>
         /// Available to override in the Kml page which filters out non-geocoded results
         /// </summary>
-        protected virtual SortedList GetSearchResults (Searcharoo.Engine.Search se)
+        protected virtual SortedList GetSearchResults(Searcharoo.Engine.Search se)
         {
             return se.GetResults(this.SearchQuery, _Catalog);
         }
+
         /// <summary>
         /// Available to override in the Kml page, which doesn't support 'paging'
         /// </summary>
@@ -65,6 +76,7 @@ namespace Searcharoo.WebApplication
                 return Preferences.ResultsPerPage;
             }
         }
+
         protected string SearchQuery
         {
             get
@@ -79,6 +91,7 @@ namespace Searcharoo.WebApplication
                 }
             }
         }
+
         /// <summary>
         /// ALL processing happens here, since we are not using ASP.NET controls or events.
         /// Page_Load will:
@@ -95,15 +108,19 @@ namespace Searcharoo.WebApplication
 
             bool getCatalog = false;
             try
-            {   // see if there is a catalog object in the cache
+            {   
+                // see if there is a catalog object in the cache
                 _Catalog = (Catalog)Application["Searcharoo_Catalog"];
-                _WordCount = _Catalog.Length; // if so, get the _WordCount
+
+                // if so, get the _WordCount
+                _WordCount = _Catalog.Length;
                 _Cache = (Searcharoo.Common.Cache)Application["Searcharoo_Cache"];
             }
             catch (Exception ex)
             {
                 // otherwise, we'll need to build the catalog
-                Trace.Write("Catalog object unavailable : building a new one ! " + ex.ToString() );
+                log.Warn("Catalog object unavailable : building a new one!");
+
                 _Catalog = null; // in case
                 _Cache = null;
             }
@@ -122,40 +139,25 @@ namespace Searcharoo.WebApplication
 
             if (getCatalog)
             {
+                // Create the thread object, passing in the Alpha.Beta method
+                // via a ThreadStart delegate. This does not start the thread.
+                SearchCatalogInit sci = new SearchCatalogInit();
+                Thread t = new Thread(() => sci.GetCatalog(this));
+                t.Start();
+
                 if ((string)Application["CatalogLoad"] == "")
                 {
-                    Application["CatalogLoad"] = "Loading catolog in progress...";
-
-                    // No catalog 'in memory', so let's look for one
-                    // First, for a serialized version on disk	
-                    _Catalog = Catalog.Load();  // returns null if not found
-                    _Cache = Searcharoo.Common.Cache.Load(); // [v7]
-                    _Catalog.FileCache = _Cache;
                     // Still no Catalog, so we have to start building a new one
-                    if (null == _Catalog)
+                    if (_Catalog == null)
                     {
-                        //    Server.Transfer("SearchSpider.aspx");
                         _Catalog = (Catalog)Application["Searcharoo_Catalog"];
                         _Cache = (Searcharoo.Common.Cache)Application["Searcharoo_Cache"];
-                        Trace.Write("Catalog retrieved from Cache[] " + _Catalog.Words);
                     }
-                    else
-                    {   // Yep, there was a serialized catalog file
-                        // Don't forget to add to cache for next time (the Spider does this too)
-                        Application["Searcharoo_Catalog"] = _Catalog;
-                        Application["Searcharoo_Cache"] = _Cache;
-                        Trace.Write("Deserialized catalog and put in Cache[] " + _Catalog.Words);
-                    }
-
-                    Application["CatalogLoad"] = "";
                 }
             }
 
             if (this.SearchQuery == "")
             {
-                //ucSearchPanelHeader.ErrorMessage = "Please type a word (or words) to search for<br>";
-                //ucSearchPanelFooter.Visible = false;
-                //ucSearchPanelFooter.IsFooter = true;
                 ucSearchPanelHeader.IsSearchResultsPage = false;
             }
             else
@@ -183,15 +185,12 @@ namespace Searcharoo.WebApplication
                 {
                     lblNoSearchResults.Visible = true;
                 }
+
                 // Set the display info in the top & bottom user controls
                 ucSearchPanelHeader.Word = this.SearchQuery;
-                //ucSearchPanelFooter.Visible = true;
-                //ucSearchPanelFooter.IsFooter = true;
                 ucSearchPanelHeader.IsSearchResultsPage = true;
             }
-
-        } // Page_Load
-
+        }
 
         public string CreatePageUrl(string searchFor, int pageNumber)
         {

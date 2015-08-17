@@ -12,6 +12,12 @@
             <div id="errorResult">
                 <%=_ErrorMessage%>
             </div>
+            <%
+                if ((string)Application["CatalogLoad"] != null)
+                {
+                    Response.Write((string)Application["CatalogLoad"]);
+                }
+            %>
         </div>
     </form>
 </asp:Panel>
